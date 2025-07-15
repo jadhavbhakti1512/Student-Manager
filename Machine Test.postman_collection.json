@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "b570d1fb-7f66-4e74-b3d1-ea521989ac9e",
+		"name": "Machine Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46774842",
+		"_collection_link": "https://bhakti-7711128.postman.co/workspace/bhakti's-Workspace~d29c746c-7015-42f8-8daf-a92d5d587d50/collection/46774842-b570d1fb-7f66-4e74-b3d1-ea521989ac9e?action=share&source=collection_link&creator=46774842"
+	},
+	"item": [
+		{
+			"name": "Creating a new student record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bhakti Jadhav\",\r\n  \"email\": \"jadhavbhakti151211@gmail.com\",\r\n  \"age\": 23,\r\n  \"marks\": [\r\n    { \"subject\": \"Math\", \"score\": 88 },\r\n    { \"subject\": \"Science\", \"score\": 92 }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving a list of all students",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bhakti Jadhav\",\r\n  \"email\": \"bhakti@jadhav.com\",\r\n  \"age\": 22\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students?page=1&limit=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving a single student by ID with mark",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bhakti Jadhav\",\r\n  \"email\": \"bhakti@jadhav.com\",\r\n  \"age\": 22\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/68dc3638-2e32-4cbd-8303-033118e370c2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"68dc3638-2e32-4cbd-8303-033118e370c2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating a student's information",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Patil\"\r\n\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/69c4754f-8a43-46b5-ba98-f83cfe592ec3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"69c4754f-8a43-46b5-ba98-f83cfe592ec3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting a student record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bhakti Jadhav\",\r\n  \"email\": \"bhakti@jadhav.com\",\r\n  \"age\": 22\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/68dc3638-2e32-4cbd-8303-033118e370c2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"68dc3638-2e32-4cbd-8303-033118e370c2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
