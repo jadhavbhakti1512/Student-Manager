@@ -27,3 +27,7 @@ model Mark {
 
   student   Student  @relation(fields: [studentId], references: [id])
 }
+
+
+
+
